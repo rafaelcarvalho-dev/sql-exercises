@@ -1,0 +1,10 @@
+CREATE DATABASE produtos;
+
+USE produtos;
+
+CREATE TABLE produtos (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR (100) NOT NULL,
+	preco DECIMAL (10,2) NOT NULL,
+	codigo_barra VARCHAR (80) UNIQUE
+);
