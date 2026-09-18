@@ -1,0 +1,12 @@
+# Ambiente
+.env
+*.log
+
+# Sistema operacional / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Dumps de banco (arquivos grandes, não versionar)
+*.dump
+*.bak
