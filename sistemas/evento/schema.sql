@@ -1,0 +1,25 @@
+CREATE DATABASE sistemaEvento;
+
+USE sistemaEvento;
+
+CREATE TABLE locais (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR (100) NOT NULL,
+	cidade VARCHAR (50) NOT NULL
+);
+
+CREATE TABLE eventos (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR (100) NOT NULL,
+	data_evento DATE NOT NULL,
+	id_local INT NOT NULL,
+	FOREIGN KEY (id_local) REFERENCES locais(id)
+);
+
+CREATE TABLE ingressos (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	tipo VARCHAR (50) NOT NULL,
+	preco DECIMAL (10,2) NOT NULL,
+	id_evento INT NOT NULL,
+	FOREIGN KEY (id_evento) REFERENCES eventos(id)
+);
