@@ -15,17 +15,17 @@ Isso sobe um MySQL 8.0 local em `localhost:3306` (usuário `root`, senha definid
 Para rodar um exercício específico, por exemplo o sistema de biblioteca:
 
 ```bash
-mysql -h 127.0.0.1 -u root -p < sistemas/biblioteca/schema.sql
-mysql -h 127.0.0.1 -u root -p < sistemas/biblioteca/seed.sql
-mysql -h 127.0.0.1 -u root -p < sistemas/biblioteca/queries.sql
+mysql -h 127.0.0.1 -u root -p < list-01-keys-and-relationships/ex001/schema.sql
+mysql -h 127.0.0.1 -u root -p < list-01-keys-and-relationships/ex001/seed.sql
+mysql -h 127.0.0.1 -u root -p < list-01-keys-and-relationships/ex001/queries.sql
 ```
 
 ## Estrutura
 
 | Pasta | Assunto |
 |---|---|
-| `sistemas/` | `PRIMARY KEY`, `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE`, `FOREIGN KEY` — 10 sistemas relacionais com três tabelas em cadeia |
-| `alter-table/` | `ALTER TABLE`: `ADD`, `MODIFY`, `RENAME COLUMN`, `RENAME TO`, `DROP INDEX` |
+| `list-01-keys-and-relationships/` | `PRIMARY KEY`, `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE`, `FOREIGN KEY` — 10 sistemas relacionais com três tabelas em cadeia |
+| `list-02-ddl-alter-table/` | `ALTER TABLE`: `ADD`, `MODIFY`, `RENAME COLUMN`, `RENAME TO`, `DROP INDEX` |
 
 Cada pasta de exercício segue a mesma separação de responsabilidade:
 - `schema.sql` — apenas `CREATE DATABASE` / `CREATE TABLE` (DDL)
