@@ -1,0 +1,18 @@
+CREATE DATABASE futebol;
+
+USE futebol;
+
+CREATE TABLE times (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	nome_time VARCHAR (80) NOT NULL,
+	cidade VARCHAR (50) NOT NULL
+);
+
+CREATE TABLE jogadores (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR (80) NOT NULL,
+	posicao VARCHAR (40) NOT NULL,
+	gols INT NOT NULL,
+    id_time INT NOT NULL,
+    FOREIGN KEY (id_time) REFERENCES times(id)
+);
